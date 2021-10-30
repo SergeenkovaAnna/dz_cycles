@@ -12,8 +12,8 @@ public class Строки {
         System.out.println("ФИО сотрудника - " + fullName);
 
         //Task2
-        String BigLetters = fullName.toUpperCase(Locale.ROOT);
-        System.out.println("Данные ФИО сотрудника для заполнения отчета — " + BigLetters);
+        String bigLetters = fullName.toUpperCase();
+        System.out.println("Данные ФИО сотрудника для заполнения отчета — " + bigLetters);
 
         //Task3
         String propuskName = fullName.replace(" " , "; ");
