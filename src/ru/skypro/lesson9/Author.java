@@ -1,20 +1,24 @@
 package ru.skypro.lesson9;
 
 public class Author {
-    private String authorName;
-    private String authorFirstName;
+    private final String name;
+    private final String surname;
 
-    public Author(String authorName, String authorFirstName) {
-        this.authorName = authorName;
-        this.authorFirstName = authorFirstName;
+    public Author(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
     }
 
-    public String getAuthorName() {
-        return this.authorName;
+    public String getName() {
+        return this.name;
     }
 
-    public String getAuthorFirstName() {
-        return this.authorFirstName;
+    public String getSurname() {
+        return this.surname;
+    }
+
+    public String toString() {
+        return getName() + " " + getSurname();
     }
 
 }

@@ -2,11 +2,17 @@ package ru.skypro.lesson9;
 
 public class Book {
 
-    int publishingYear;
+    private int publishingYear;
+    private final String title;
 
-    public Book(int publishingYear) {
 
+    public Book(String title, int publishingYear) {
+        this.title=title;
         this.publishingYear = publishingYear;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
 
@@ -17,6 +23,10 @@ public class Book {
     public int setPublishingYear(int publishingYear) {
         this.publishingYear = publishingYear;
         return publishingYear;
+    }
+
+    public String toString() {
+        return "Название: " + getTitle() + ";" + " Год издания:" + getPublishingYear();
     }
 
 }
