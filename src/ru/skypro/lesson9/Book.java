@@ -5,24 +5,12 @@ import java.util.Objects;
 public class Book {
 
     private int publishingYear;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return publishingYear == book.publishingYear && title.equals(book.title);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(publishingYear, title);
-    }
-
     private final String title;
+    private final Author author;
 
 
-    public Book(String title, int publishingYear) {
+    public Book(Author author, String title, int publishingYear) {
+        this.author = author;
         this.title=title;
         this.publishingYear = publishingYear;
     }
@@ -41,8 +29,25 @@ public class Book {
         return publishingYear;
     }
 
-    public String toString() {
-        return "Название: " + getTitle() + ";" + " Год издания:" + getPublishingYear();
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return publishingYear == book.publishingYear && title.equals(book.title);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(publishingYear, title);
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "publishingYear=" + publishingYear +
+                ", title='" + title + '\'' +
+                ", author=" + author +
+                '}';
+    }
 }
