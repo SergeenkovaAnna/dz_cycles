@@ -34,7 +34,7 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return publishingYear == book.publishingYear && title.equals(book.title);
+        return publishingYear == book.publishingYear && Objects.equals(author, book.author) && Objects.equals(title, book.title);
     }
 
     @Override
