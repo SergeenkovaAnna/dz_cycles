@@ -1,5 +1,6 @@
 package ru.skypro;
 
+import java.util.Arrays;
 import java.util.Locale;
 
 public class Строки {
@@ -16,15 +17,13 @@ public class Строки {
         System.out.println("Данные ФИО сотрудника для заполнения отчета — " + bigLetters);
 
         //Task3
-        String propuskName = fullName.replace(" " , "; ");
+        String propuskName = fullName.replace(" ", "; ");
         System.out.println("Данные ФИО сотрудника для административного отдела — " + propuskName);
 
         //Task4
         String nonUnikal = fullName.replace("ё", "e");
         System.out.println("Данные ФИО сотрудника - " + nonUnikal);
-
     }
 
-
-    }
+}
 
